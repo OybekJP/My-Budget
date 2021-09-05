@@ -1,5 +1,5 @@
 # My Budget - multifunctional budget app
-A budget app that helps to keep the record of expenses, edit and delete past expense.
+A budget app that helps you not only keep the record of expenses, but also edit and delete them.
 
 ## General info
 It has mobile responsive simple design, dipslays list of expenses and allows to edit or delete past expenses details. It also displays budget, total expenses, and current balance.
