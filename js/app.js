@@ -203,3 +203,12 @@ function eventListeners() {
 document.addEventListener("DOMContentLoaded", function () {
   eventListeners();
 });
+
+const currency = document.getElementById("currencies");
+const currencySymbol = document.querySelectorAll(".currencySymbol");
+//change currency symbol based on selected currency
+currency.addEventListener("change", () => {
+  currencySymbol.forEach((element) => {
+    element.innerText = currency.value;
+  });
+});

@@ -41,14 +41,26 @@ body {
 }
 .budget-submit:hover {
   background: var(--mainGreen);
-  color: var(--mainDark);
+  color: var(--mainWhite);
 }
 
 .budget-input {
   border: 0.05rem solid var(--mainGreen) !important;
 }
+label{
+  margin-top: 1rem;
+}
+#currencies{
+  display:inline;
+  border: 0.05rem solid var(--mainGreen) !important;
+  border-radius: 0.25rem;
+  padding: .375rem .75rem;
+  width: 100%;
+}
+
+
 .expense-input {
-  border: 0.05rem solid var(--mainRed) !important;
+  border: 0.05rem solid var(--mainRed);
 }
 .expense-amount,
 .expense-title {
