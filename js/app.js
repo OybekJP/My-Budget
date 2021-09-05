@@ -14,6 +14,7 @@ class UI {
     this.expenseInput = document.getElementById("expense-input");
     //amount of your expense
     this.amountInput = document.getElementById("amount-input");
+    this.dateInput = document.getElementById("date-input");
     this.expenseList = document.getElementById("expense-list");
     this.itemList = [];
     this.itemID = 0;
@@ -113,6 +114,8 @@ class UI {
     const expenseValue = this.expenseInput.value;
     //amount of your expense
     const amountValue = this.amountInput.value;
+    //amount of your expense
+    const dateValue = this.dateInput.value;
     if (expenseValue === "" || amountValue === "" || amountValue < 0) {
       this.expenseFeedback.classList.add("showItem");
       this.expenseFeedback.innerHTML =
@@ -122,17 +125,21 @@ class UI {
       }, 4000);
     } else {
       let amount = parseInt(amountValue);
+      //let date = parseInt(dateValue);
       //access constructor and clear exp value and amount once everthing works correct
       this.expenseInput.value = "";
       this.amountInput.value = "";
+      this.dateInput.value = "";
       //save exp value and amount in an object
       let expense = {
         id: this.itemID,
         title: expenseValue,
         amount: amount,
+        date: dateValue,
       };
       this.itemID++;
       this.itemList.push(expense);
+      console.log(this.itemList);
       //display expense
       this.addExpense(expense);
       //show balance
@@ -145,8 +152,9 @@ class UI {
     div.innerHTML = `
     <div class="expense-item d-flex justify-content-between align-items-baseline">
 
-      <h6 class="expense-title mb-0 text-uppercase list-item">- ${expense.title}</h6>
-      <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
+      <h6 class="expense-date mb-0  list-item">${expense.date}</h6>
+      <h6 class="expense-title mb-0  list-item">${expense.title}</h6>
+      <h6 class="expense-amount mb-0 list-item">${expense.amount}</h6>
 
       <div class="expense-icons list-item">
 

@@ -135,10 +135,17 @@ label{
     color: var(--mainBlue);
   }
 }
-.list-item {
-  flex: 0 0 33.33%;
+.list-item h6 {
+  flex: 0 1 20%;
   text-align: center;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
-.expense-item {
-  height: 2rem;
+
+@media screen and (max-width:400px){
+  .expense-date{
+    font-size: 0.7rem;
+    text-align: start;
+  }
 }
